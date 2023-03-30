@@ -18,6 +18,8 @@ def cli(token, org):
     if not os.path.exists(f"{os.getcwd()}/code"):
         os.mkdir(f"{os.getcwd()}/code")
 
+    print(f"Total number of repositories: {len(r.json())}\n---------------------------------")
+
     with tempfile.TemporaryDirectory() as temp_dir:
         for repo in r.json():
             print(f"Downloading {repo['name']}")
