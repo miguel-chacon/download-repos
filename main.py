@@ -34,7 +34,7 @@ def cli(token, org):
                         for chunk in res.iter_content(chunk_size=1024*1204*10):
                             fd.write(chunk)
                     with zipfile.ZipFile(f"{temp_dir}/{repo['name']}.zip") as zip_ref:
-                        zip_ref.extractall(f"{os.getcwd()}/code/{repo['name']}")
+                        zip_ref.extractall(f"{os.getcwd()}/code/")
                     break
                 print(f"Error downloading {repo['name']}")
 
