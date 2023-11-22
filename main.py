@@ -37,7 +37,6 @@ def download(url, headers, org, dest):
             if 'rel="next"' in i:
                 link = re.search(r'<(\S+)>', i).group(1)
     except KeyError:
-
         pass
 
     return files, link
@@ -89,7 +88,7 @@ def cli(token, org, zipped):
             if url == '':
                 break
 
-    print(f"---------------------------------\nTotal number of repositories: {total}\n---------------------------------")
+    print(f"--------------------------------\nTotal number of repositories: {total}\n--------------------------------")
 
 
 if __name__ == '__main__':
